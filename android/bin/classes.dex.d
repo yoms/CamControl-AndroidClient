@@ -1,0 +1,26 @@
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes.dex : \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/ministro/IMinistro$Stub$Proxy.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/ministro/IMinistroCallback.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/ministro/IMinistro$Stub.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/ministro/IMinistroCallback$Stub$Proxy.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/ministro/IMinistroCallback$Stub.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/ministro/IMinistro.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtActivity$3$1$1.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtActivity.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtActivity$3$1.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtActivity$1.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtActivity$3.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtApplication$InvokeResult.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtActivity$6.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtActivity$4.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtApplication.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtActivity$5.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/origo/QtActivity$2.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/example/CamControlClient/R$layout.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/example/CamControlClient/R.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/example/CamControlClient/R$string.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/example/CamControlClient/R$drawable.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/example/CamControlClient/R$attr.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/example/CamControlClient/R$array.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/classes/org/kde/necessitas/example/CamControlClient/BuildConfig.class \
+/home/guillaume/Workspace/CamControlClient/src/android/bin/dexedLibs/annotations-aa1176e67362d7024edd40afb6420807.jar \
