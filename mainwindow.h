@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QTcpSocket>
+#include <QModelIndex>
+#include "client.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,10 +19,14 @@ public:
     ~MainWindow();
 public slots:
     void onCaptureClicked();
+    void onServerListUpdate();
+    void onSearchClicked();
+    void onServerSelectedChange(QModelIndex);
 
 private:
     Ui::MainWindow *ui;
-    QTcpSocket *tcpSocket;
+    Client m_client;
+
 };
 
 #endif // MAINWINDOW_H

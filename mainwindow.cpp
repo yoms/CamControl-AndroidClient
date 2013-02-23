@@ -1,14 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QStringListModel>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    tcpSocket = new QTcpSocket(this);
-    ui->_hostLineEdit->setText("192.168.1.20");
-    connect(ui->pushButton, SIGNAL(clicked()), SLOT(onCaptureClicked()));
+    connect(ui->_capturePushButton, SIGNAL(clicked()), SLOT(onCaptureClicked()));
+    connect(ui->_searchPushButton, SIGNAL(clicked()), SLOT(onSearchClicked()));
+    connect(&m_client, SIGNAL(serverListChanged()), SLOT(onServerListUpdate()));
+    connect(ui->_serverListView, SIGNAL(pressed(QModelIndex)), SLOT(onServerSelectedChange(QModelIndex)));
 }
 
 MainWindow::~MainWindow()
@@ -18,9 +20,30 @@ MainWindow::~MainWindow()
 
 void MainWindow::onCaptureClicked()
 {
-    tcpSocket->connectToHost(ui->_hostLineEdit->text(),
-                             8001);
 
-    while(!tcpSocket->isWritable());
-    tcpSocket->write("1");
+    m_client.sendCommand("1");
+}
+
+void MainWindow::onServerListUpdate()
+{
+    QAbstractItemModel* oldModel =  ui->_serverListView->model();
+    QList<QHostAddress> hostList = m_client.getHostList();
+    QStringList hostStringList;
+    for(int i = 0; i < hostList.size() ; i++)
+    {
+        hostStringList << hostList[i].toString();
+    }
+    ui->_serverListView->setModel(new QStringListModel(hostStringList));
+    if(oldModel)
+        delete oldModel;
+}
+
+void MainWindow::onSearchClicked()
+{
+    m_client.updateServerRequest();
+}
+
+void MainWindow::onServerSelectedChange(QModelIndex index)
+{
+    m_client.connectToServer( QHostAddress( index.data().toString() ) );
 }
