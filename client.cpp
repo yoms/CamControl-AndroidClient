@@ -21,10 +21,10 @@ void Client::connectToServer(QHostAddress serverAdress)
     m_tcpSocket->connectToHost(m_serverAdress, 8001);
 }
 
-void Client::sendCommand(const QByteArray& command)
+void Client::sendMessage(const Message& message)
 {
     while(!m_tcpSocket->isWritable());
-        m_tcpSocket->write(command);
+    m_tcpSocket->write(message.serialize());
 }
 
 void Client::onNewServeurRecieved()

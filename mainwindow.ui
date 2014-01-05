@@ -45,7 +45,14 @@
         <item row="0" column="0">
          <widget class="QPushButton" name="_capturePushButton">
           <property name="text">
-           <string>PushButton</string>
+           <string>Capture</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="_timeLapsePushButton">
+          <property name="text">
+           <string>Time lapse</string>
           </property>
          </widget>
         </item>

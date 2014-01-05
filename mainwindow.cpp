@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "message.h"
 #include <QStringListModel>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -8,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->_capturePushButton, SIGNAL(clicked()), SLOT(onCaptureClicked()));
+    connect(ui->_timeLapsePushButton, SIGNAL(clicked()), SLOT(onTimeLapseClicked()));
     connect(ui->_searchPushButton, SIGNAL(clicked()), SLOT(onSearchClicked()));
     connect(&m_client, SIGNAL(serverListChanged()), SLOT(onServerListUpdate()));
     connect(ui->_serverListView, SIGNAL(pressed(QModelIndex)), SLOT(onServerSelectedChange(QModelIndex)));
@@ -21,7 +23,15 @@ MainWindow::~MainWindow()
 void MainWindow::onCaptureClicked()
 {
 
-    m_client.sendCommand("1");
+    CaptureMessage message;
+    m_client.sendMessage(message);
+}
+
+void MainWindow::onTimeLapseClicked()
+{
+
+    TimeLapseMessage message(10,10);
+    m_client.sendMessage(message);
 }
 
 void MainWindow::onServerListUpdate()

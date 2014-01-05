@@ -19,6 +19,7 @@ public:
     ~MainWindow();
 public slots:
     void onCaptureClicked();
+    void onTimeLapseClicked();
     void onServerListUpdate();
     void onSearchClicked();
     void onServerSelectedChange(QModelIndex);

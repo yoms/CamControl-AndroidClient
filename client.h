@@ -7,6 +7,7 @@
 #include <QTcpSocket>
 #include <QUdpSocket>
 #include <QHostAddress>
+#include "message.h"
 
 class Client : public QObject
 {
@@ -22,7 +23,7 @@ public:
 signals:
     void serverListChanged();
 public slots:
-    void sendCommand(const QByteArray& command);
+    void sendMessage(const Message& message);
 private slots:
     void onNewServeurRecieved();
 private:
